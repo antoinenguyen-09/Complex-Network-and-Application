@@ -24,6 +24,7 @@ msg_count = eg_set['Msg Count'].values.tolist()  #eg_list
 2) Tạo một đối tượng Graph từ các dữ liệu đã được bóc tách:
 
 a) Sơ lược kiến thức về Graph:
+
 Các bạn học môn Cấu trúc dữ liệu và Giải thuật có lẽ không còn xa lạ gì với Graph (đồ thị). Graph là một cấu trúc dữ liệu được xác định bởi hai thành phần:
 - Một node hay còn gọi là một **vertex**(điểm).
 - Một cạnh (**edge**) E là một kết nối (connection) có hướng hoặc vô hướng giữa hai điểm trong một graph. Trên một cạnh có thể có trọng số (weight) hoặc không.
@@ -34,6 +35,7 @@ package chứa thư viện này không có sẵn trong google colab nên ta ph�
 ![image](https://user-images.githubusercontent.com/61876488/102680827-a0c1a800-41ee-11eb-997d-b5c90cb3dbad.png)
 
 b) Tạo đối tượng Graph, thêm điểm và cạnh vào Graph:
+
 Khởi tạo một đối tượng Graph của riêng bạn, ví dụ: `g1  = Graph(directed=True)`. Thuộc tính directed biểu thị tính có hướng hoặc vô hướng của Graph, có thể có hoặc không, tùy vào yêu cầu của bài toán đặt ra. Hiện tại đối tượng Graph này đang hoàn toàn "rỗng", do đó trước tiên chúng ta sẽ thêm các điểm (vertex) vào:
 ```python 
 g1.add_vertices(name,{"age": age,"gender": gender})
@@ -54,7 +56,9 @@ Graph đã được tạo xong, về cơ bản đã có thể đem đi vẽ. Đ�
 ![image](https://user-images.githubusercontent.com/61876488/102684291-d627bf00-4209-11eb-8066-8cf362657c20.png)
 
 Trong đó các hàng (row) và cột (column) đều biểu diễn các điểm. Giá trị 1 đại diện việc điểm này kề (có kết nối) với điểm kia, còn giá trị 0 thì ngược lại. 
+
 c) Lắp ráp dữ liệu mới từ các thành phần của Graph:
+
 Trong tay chúng ta bây giờ là một chiếc Graph đã "đủ lông đủ cánh", chỉ còn một bước nữa là chúng ta sẽ đến đích: vẽ được một graph hoàn chỉnh ngay chính trên browser của bạn. Toàn bộ công việc đó sẽ được công cụ sigma cùng script của mình giải quyết bằng hết, với điều kiện trước tiên là các bạn phải cho chúng một input chất lượng - một file json chứa dữ liệu hay "profile" của Graph mà bạn vừa tạo.
 Trước hết mình sẽ nói sơ qua về file json. **JSON** là chữ viết tắt của **J**avascript **O**bject **N**otation, một định dạng lưu trữ thông tin (thường là về các đối tượng trên một app, một website...) có cấu trúc và chủ yếu được sử dụng để trao đổi dữ liệu giữa server và client. JSON có vẻ ngoài đơn giản, thân thiện với coder, lại có thể đọc, xử lý và ghi file dễ dàng hơn nhiều so với  [XML](https://www.codehub.com.vn/Phan-Biet-XML-va-HTML) nên tính ứng dụng của nó hiện nay rất là phổ biến.
 
