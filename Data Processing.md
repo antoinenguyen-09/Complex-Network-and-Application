@@ -1,5 +1,7 @@
 # Data Processing
+
 1) Lấy dữ liệu vào, bóc tách dữ liệu:
+
  Để có thể làm được điều này, chúng ta sẽ sử dụng thư viện pandas: `import pandas as pd`. Đây là một thư viện rất phổ biến trong cộng đồng data scientist bởi khả năng import data từ các file format đa dạng như json, csv, Excel..., đồng thời cung cấp rất nhiều phương thức xử lý file theo ý muốn của user subsetting, slicing, filtering, merging, groupBy, re-ordering, and re-shaping... Ở đây chúng ta sẽ import data từ hai file "edge_list.csv" và "vertex_set.csv" bằng hàm "read_csv":
 ```python 
 vx_set = pd.read_csv('vertex_set.csv')
